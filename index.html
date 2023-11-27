@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="word-falling-container h-1/1 sm:h-screen gap-1 items-center  p-10 ">
+        <div class="score absolute left-1 text-white bottom-0-2 flex justify-between w-full p-9">
+
+            <div class="correct-word">Score: 0</div>
+            <div class="missed-word">Life: 10</div>
+
+        </div>
+        <div class="input-field absolute  bottom-3 left-1/2 -translate-x-1/2 top-1">
+            <input class="user-input border-2  rounded-md p-4 bg-transparent text-white border-slate-200 font-bold"
+                type="text " name="" id="" placeholder="Enter text here " autocapitalize="none">
+        </div>
+    </div>
+
+
+    <div class="input-area absolute left-1/2 -translate-x-1/2 top-1/4 ">
+
+
+    </div>
+
+    <div id="score-container" class="hidden fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-90">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-yellow-500">Game Over!</h1>
+            <p class="text-xl text-gray-300">Your Score: <span id="score" class="text-3xl font-bold text-red-500 mt-2">0</span></p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700" id="restartButton">Restart</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>

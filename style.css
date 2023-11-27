@@ -1,0 +1,86 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Poppins:wght@600&display=swap');
+@viewport {
+    width: device-width;
+    height: device-height;
+    viewport-fit: cover;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins;
+    background: rgb(40, 49, 66);
+}
+@media screen and (max-width: 780px) {
+    
+}
+
+.word-falling-container {
+    box-shadow: 2px -2px 10px slateblue;
+    position: relative;
+    margin: auto;
+    width: 99vw;
+    height: 50vh;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+
+
+.bubble {
+    border: 2px solid slategray;
+    background: slategrey;
+    border-radius: 100%;
+    width: fit-content;
+    aspect-ratio: 1;
+    padding: 0.8rem;
+    font-size: larger;
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    color: white;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    animation: bubble-animation 9s;
+    scale: 1;
+    transition: 0.3s;
+}
+
+@keyframes bubble-animation{
+    0% { top: 0% }
+    100% {top: 100%;
+    transform: translateY(-100%); }
+}
+
+
+@keyframes shakeAndBlink {
+    0%, 100% {
+        transform: translateX(0);
+        border-color: red;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+        border-color: transparent;
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+        border-color: red;
+    }
+}
+
+input:focus {
+  
+    outline: none;
+
+  }
